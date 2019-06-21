@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="new-test-suite.xml" />
+	<munit:test name="new-test-suite-testprojectFlowTest" description="Test" doc:id="b5192c5a-8acf-431a-a87b-9162aabdd00d" >
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to testprojectFlow" doc:id="7f164588-5c31-4db9-b925-f7b44585d7bb" name="testprojectFlow"/>
+		</munit:execution>
+		<munit:validation >
+			<set-variable value='hello world' doc:name="Set Variable" doc:id="fb0d841c-4279-47bd-8ca5-cb75d22d1c0e" variableName="expected"/>
+			<munit-tools:assert-that doc:name="Assert that" doc:id="f1bde409-a839-4438-91a7-80be1d996ed4" expression="#[payload]" is='#[MunitTools::equalTo(vars.expected)]' message="Case failed"/>
+		</munit:validation>
+	</munit:test>
+
+
+</mule>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="9ac8e94e-69b1-4caa-897d-abcb78cb34e9" >
+		<http:listener-connection host="localhost" port="8082" />
+	</http:listener-config>
+	<http:request-config name="HTTP_Request_configuration" doc:name="HTTP Request configuration" doc:id="ad9d8c30-f8b8-4eb8-b8ec-f6a415b9095b" basePath="/abc" >
+		<http:request-connection host="localhost" port="8082" />
+	</http:request-config>
+	<http:request-config name="HTTP_Request_configuration1" doc:name="HTTP Request configuration" doc:id="896fedf7-fc7d-40fb-b978-95570fc20942" basePath="/abc" >
+		<http:request-connection host="localhost" port="8082" />
+	</http:request-config>
+	<http:listener-config name="HTTP_Listener_config1" doc:name="HTTP Listener config" doc:id="72e238ef-1273-43bf-866a-475ae1848577" >
+		<http:listener-connection host="localhost" port="8081" />
+	</http:listener-config>
+	<flow name="testprojectFlow" doc:id="30f82761-600b-473c-876f-8287c1d5e1d3" >
+		<http:listener doc:name="Listener" doc:id="7339fe1e-b36a-453d-adc9-7ae5729f43d4" config-ref="HTTP_Listener_config1" path="/hello"/>
+		<set-payload value="hello world" doc:name="Set Payload" doc:id="55f2102b-8251-4578-9cf6-d7bf4abfdab3" />
+		<logger level="INFO" doc:name="Logger" doc:id="2e4d3977-c42f-41ff-a667-e0e89ab604d2" message="#[payload]" />
+	</flow>
+</mule>
