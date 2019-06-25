@@ -51,7 +51,7 @@
 						<password>Capgemini!23</password>
 						<businessGroup>Abbott\ADC\ADC-NextGen-V3</businessGroup>
 						<applicationName>${applicationname}</applicationName>
-						<environment>Dev-CI</environment>
+						<environment>DEV-CI</environment>
 					</cloudHubDeployment>
 				</configuration>
 			</plugin>	
