@@ -36,14 +36,6 @@
 
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.mule.tools.maven</groupId>
-				<artifactId>mule-maven-plugin</artifactId>
-				<version>${mule.maven.plugin.version}</version>
-				<extensions>true</extensions>
-				<configuration>
-				</configuration>
-			</plugin>
 		        <plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
@@ -55,11 +47,11 @@
 						<region>eu-central-1</region>
 						<uri>https://eu1.anypoint.mulesoft.com</uri>
 						<muleVersion>${app.runtime}</muleVersion>
-						<username>${username}</username>
-						<password>${password}</password>
+						<username>cgmuledevops</username>
+						<password>Capgemini!23</password>
 						<businessGroup>Abbott\ADC\ADC-NextGen-V3</businessGroup>
 						<applicationName>${applicationname}</applicationName>
-						<environment>${env}</environment>
+						<environment>dev</environment>
 					</cloudHubDeployment>
 				</configuration>
 			</plugin>	
