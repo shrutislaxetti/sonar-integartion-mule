@@ -131,7 +131,8 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <coverage>
+                    <runtimeVersion>4.2.0</runtimeVersion>
+			<coverage>
                         <runCoverage>true</runCoverage>
                         <formats>
                             <format>html</format>
