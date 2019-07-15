@@ -17,6 +17,9 @@
 		<mule.maven.plugin.version>3.1.6</mule.maven.plugin.version>
 	       <munit.version>2.1.4</munit.version>
                <mule.tools.version>1.7</mule.tools.version>
+	       <sonar.buildVersion>2.11</sonar.buildVersion>
+	       <sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
+               <sonar.sources>src/main/mule,src/main/resources,src/test/munit,/target/site/munit/coverage/</sonar.sources>
   	    </properties>
 
 	<build>
