@@ -32,11 +32,11 @@
 				<configuration>
 				</configuration>
 			</plugin>
-			<plugin>
+			<!--<plugin>
 				<groupId>org.sonarsource.scanner.maven</groupId>
 				<artifactId>sonar-maven-plugin</artifactId>
 
-			</plugin>
+			</plugin> -->
               </plugins>
      </build>
 	
