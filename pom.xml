@@ -19,7 +19,7 @@
                <mule.tools.version>1.7</mule.tools.version>
 	       <sonar.buildVersion>2.11</sonar.buildVersion>
 	       <sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
-               <sonar.sources>src/main/mule,src/main/resources,src/test/munit</sonar.sources>
+              <!-- <sonar.sources>src/main/mule,src/main/resources,src/test/munit</sonar.sources> -->
   	    </properties>
 
 	<build>
